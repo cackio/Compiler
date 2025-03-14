@@ -4,8 +4,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # set (CMAKE_CXX_COMPILER "/usr/bin/clang")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -lm")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fdebug-prefix-map=${CMAKE_BINARY_DIR}=${CMAKE_SOURCE_DIR}") #fix gdb can't find source path
-message(${CMAKE_CXX_FLAGS})
-set(CMAKE_BUILD_TYPE "Debug")
+message(${CMAKE_CXX_FLAGS})   # print flags
+set(CMAKE_BUILD_TYPE "Debug")  # Debug mode
 
 project(SYSY-compiler VERSION 0.1.0 LANGUAGES C CXX)
 add_definitions(-DSYSY_ENABLE_MIDDLE_END)

@@ -52,11 +52,13 @@ void _PassManager::RunOnTest() {
         break;
       }
       case constprop: {
-        // auto m_constprop = RunImpl<ConstantProp>(curfunc, AM);
+        auto m_constprop = RunImpl<ConstantProp>(curfunc, AM);
         break;
       }
       case dce: {
-        // ContinueRunPassOnTest(DCE, curfunc) break;
+        //ContinueRunPassOnTest(DCE, curfunc) break;
+        auto DCEres = RunImpl<DCE>(curfunc, AM); 
+        break;
       }
       default: {
         assert(0);

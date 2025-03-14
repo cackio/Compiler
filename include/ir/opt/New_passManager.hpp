@@ -2,6 +2,8 @@
 #include "../Analysis/dominant.hpp"
 #include "PassManagerBase.hpp"
 #include "mem2reg.hpp"
+#include "DCE.hpp"
+#include "ConstantProp.hpp"
 #include <any>
 #include <getopt.h>
 #include <memory>
